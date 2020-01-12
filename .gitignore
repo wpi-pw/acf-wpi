@@ -25,7 +25,6 @@ project.properties
 none
 npm-debug.log
 yarn-error.log
-package-lock.json
 
 # Sass
 .sass-cache/
