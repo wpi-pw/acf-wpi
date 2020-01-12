@@ -1,9 +1,9 @@
-# [Advanced Custom Fields Plus](https://acf.plus)
-[![Packagist](https://img.shields.io/packagist/vpre/acf-plus/advanced-custom-fields-plus.svg?style=flat-square)](https://packagist.org/packages/acf-plus/advanced-custom-fields-plus)
-[![devDependency Status](https://img.shields.io/david/dev/acf-plus/advanced-custom-fields-plus.svg?style=flat-square)](https://david-dm.org/acf-plus/advanced-custom-fields-plus#info=devDependencies)
-[![Build Status](https://img.shields.io/travis/acf-plus/advanced-custom-fields-plus.svg?style=flat-square)](https://travis-ci.org/acf-plus/advanced-custom-fields-plus)
+# [Advanced Custom Fields wpi](https://acf.wpi.pw)
+[![Packagist](https://img.shields.io/packagist/vpre/wpi-pw/acf-wpi.svg?style=flat-square)](https://packagist.org/packages/wpi-pw/acf-wpi)
+[![devDependency Status](https://img.shields.io/david/dev/wpi-pw/acf-wpi.svg?style=flat-square)](https://david-dm.org/wpi-pw/acf-wpi#info=devDependencies)
+[![Build Status](https://img.shields.io/travis/wpi-pw/acf-wpi.svg?style=flat-square)](https://travis-ci.org/wpi-pw/acf-wpi)
 
-=== Advanced Custom Fields Plus ===
+=== Advanced Custom Fields wpi ===
 
 A custom ACF plugin boilerplate.
 
@@ -12,9 +12,9 @@ A custom ACF plugin boilerplate.
 This plugin uses namespaces following format:
 CompanyName\PluginName\Folder 
 
-It starts with namespace ACF\ACFPLUS autoloading the lib folder;
+It starts with namespace ACF\ACFWPI autoloading the lib folder;
 
-Before composer install -> do a find and replace in all folders for ACFPLUS.  Replace with your plugin name.
+Before composer install -> do a find and replace in all folders for ACFWPI.  Replace with your plugin name.
 
 == Commands ==
 

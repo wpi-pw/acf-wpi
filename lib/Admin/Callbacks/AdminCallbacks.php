@@ -5,12 +5,12 @@
  * @package  ACF
  */
 
-namespace ACF\ACFPLUS\Admin\Callbacks;
+namespace ACF\ACFWPI\Admin\Callbacks;
 
 /**
  * Class AdminCallbacks
 
- * @package ACF\ACFPLUS\Admin\Callbacks
+ * @package ACF\ACFWPI\Admin\Callbacks
  */
 class AdminCallbacks {
 

@@ -5,12 +5,12 @@
  * @package  ACF
  */
 
-namespace ACF\ACFPLUS\Frontend;
+namespace ACF\ACFWPI\Frontend;
 
 /**
  * Class Frontend
  *
- * @package ACF\ACFPLUS\Frontend
+ * @package ACF\ACFWPI\Frontend
  */
 class Frontend {
 

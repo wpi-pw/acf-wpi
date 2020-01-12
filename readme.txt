@@ -1,4 +1,4 @@
-=== Advanced Custom Fields Plus ===
+=== Advanced Custom Fields Wpi ===
 Contributors: DimaMinka
 Tags: wordpress, acf, acf pro, composer, plugin, cdk
 Requires at least: 4.9
@@ -7,11 +7,11 @@ Stable tag: 1.0
 License: GPLv3
 License URI: https://www.gnu.org/licenses/gpl-3.0.html
 
-ACF Plus is a custom ACF plugin boilerplate.
+ACF Wpi is a custom ACF plugin boilerplate.
 
 == Description ==
 
-ACF Plus is a free plugin that allows you to develop anything with ACF.
+ACF Wpi is a free plugin that allows you to develop anything with ACF.
 
 With endless flexibility and access to hundreds of free and premium WordPress extensions, WooCommerce now powers 30% of all online stores &mdash; more than any other platform.
 
@@ -21,9 +21,9 @@ With endless flexibility and access to hundreds of free and premium WordPress ex
 
 When you download WooCommerce, you join a community of more than a million store owners, developers, and WordPress enthusiasts. We're one of the fastest-growing open source communities online, and no matter your skill level we'd love to have you!
 
-If you’re interested in contributing to ACF Plus there’s always room for more. Head over to the [ACF Plus GitHub Repository](https://github.com/acf-plus/advanced-custom-fields-plus) to find out how you can pitch in.
+If you’re interested in contributing to ACF Wpi there’s always room for more. Head over to the [ACF Wpi GitHub Repository](https://github.com/wpi-pw/acf-wpi) to find out how you can pitch in.
 
-And, finally, consider joining or spearheading a ACF Plus Telegram chat, more about those [here](https://t.me/wp_acf).
+And, finally, consider joining or spearheading a ACF Wpi Telegram chat, more about those [here](https://t.me/wp_acf).
 
 == Installation ==
 
@@ -32,7 +32,7 @@ And, finally, consider joining or spearheading a ACF Plus Telegram chat, more ab
 * PHP version 7.1 or greater (PHP 7.2 or greater is recommended)
 * MySQL version 5.0 or greater (MySQL 5.6 or greater is recommended)
 
-Visit the [ACF plus server requirements documentation](https://acf.plus/server-requirements/) for a detailed list of server requirements.
+Visit the [ACF wpi server requirements documentation](https://acf.wpi.pw/server-requirements/) for a detailed list of server requirements.
 
 = Manual installation =
 
@@ -40,9 +40,9 @@ The manual installation method involves downloading our plugin and uploading it 
 
 == Frequently Asked Questions ==
 
-= Where can I find ACF Plus documentation and user guides? =
+= Where can I find ACF Wpi documentation and user guides? =
 
-For help setting up and configuring ACF Plus please refer to our [user guide](https://acf.plus/getting-started/)
+For help setting up and configuring ACF Wpi please refer to our [user guide](https://acf.wpi.pw/getting-started/)
 
 == Screenshots ==
 
@@ -53,7 +53,7 @@ For help setting up and configuring ACF Plus please refer to our [user guide](ht
 = 1.0 - 2018-10-XX =
 * Dev - Init
 
-[See changelog for all versions](https://raw.githubusercontent.com/acf-plus/advanced-custom-fields-plus/master/CHANGELOG.txt).
+[See changelog for all versions](https://raw.githubusercontent.com/wpi-pw/acf-wpi/master/CHANGELOG.txt).
 
 == Upgrade Notice ==
 

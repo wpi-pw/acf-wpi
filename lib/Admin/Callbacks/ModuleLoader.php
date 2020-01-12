@@ -5,7 +5,7 @@
  * @package  ACF
  */
 
-namespace ACF\ACFPLUS\Admin\Callbacks;
+namespace ACF\ACFWPI\Admin\Callbacks;
 
 use StoutLogic\AcfBuilder\FieldsBuilder;
 
@@ -13,9 +13,9 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
  * Class ModuleLoader
  *
  * This is just a helper class, if you are here to see how Advanced Custom Fields
- * works, don't focus on it. If you want to build a acf_plus module, read it.
+ * works, don't focus on it. If you want to build a acf_wpi module, read it.
  *
- * @package ACF\ACFPLUS\Admin\Callbacks
+ * @package ACF\ACFWPI\Admin\Callbacks
  */
 class ModuleLoader {
 
@@ -67,7 +67,7 @@ class ModuleLoader {
 		do_action( 'acf_load_modules', $this );
 
 		// Load enabled modules.
-		$option = get_field( 'acf_plus_modules', 'option' );
+		$option = get_field( 'acf_wpi_modules', 'option' );
 		if ( $option && is_array( $option ) ) {
 			foreach ( $option as $id ) {
 				$path = $this->modules[ $id ]['path'];
@@ -105,7 +105,7 @@ class ModuleLoader {
 		}
 
 		/**
-		 * Prepare ACF Plus modules path and url.
+		 * Prepare ACF Wpi modules path and url.
 		 */
 		$modules_dir          = 'modules/';
 		$module_path          = dirname( __FILE__, 3 ) . '/' . $modules_dir;
@@ -141,7 +141,7 @@ class ModuleLoader {
 	 */
 	public function register_options_container() {
 		$modules = array();
-		$active  = get_field( 'acf_plus_modules', 'option' );
+		$active  = get_field( 'acf_wpi_modules', 'option' );
 
 		if ( ! $active ) {
 			$active = array();
@@ -166,19 +166,19 @@ class ModuleLoader {
 			}
 		}
 
-		$description = __( 'Select the modules you want to have enabled as a ACF Plus.', 'acf_plus' );
+		$description = __( 'Select the modules you want to have enabled as a ACF Wpi.', 'acf_wpi' );
 
 		if ( ! empty( $this->disabled ) ) {
-			$description .= "\n\n" . __( 'Some modules are ignored because they require Advanced Custom Fields Pro', 'acf_plus' );
+			$description .= "\n\n" . __( 'Some modules are ignored because they require Advanced Custom Fields Pro', 'acf_wpi' );
 		}
 
-		$acf_modules = new FieldsBuilder( 'acf_plus_modules' );
+		$acf_modules = new FieldsBuilder( 'acf_wpi_modules' );
 		$acf_modules
 			->addMessage(
-				'acf_plus_ui_enable_description',
-				__( 'Default visual custom fields editor', 'acf_plus' ),
+				'acf_wpi_ui_enable_description',
+				__( 'Default visual custom fields editor', 'acf_wpi' ),
 				[
-					'label'     => __( 'Enable ACF UI', 'acf_plus' ),
+					'label'     => __( 'Enable ACF UI', 'acf_wpi' ),
 					'wrapper'   => [
 						'width' => '22%',
 						'id'    => 'major-publishing-actions',
@@ -188,7 +188,7 @@ class ModuleLoader {
 				]
 			)
 			->addTrueFalse(
-				'acf_plus_ui_enable',
+				'acf_wpi_ui_enable',
 				[
 					'label'   => '',
 					'ui'      => 1,
@@ -198,10 +198,10 @@ class ModuleLoader {
 				]
 			)
 			->addMessage(
-				'acf_plus_modules_description',
+				'acf_wpi_modules_description',
 				$description,
 				[
-					'label'     => __( 'Modules', 'acf_plus' ),
+					'label'     => __( 'Modules', 'acf_wpi' ),
 					'wrapper'   => [
 						'width' => '22%',
 						'id'    => 'major-publishing-actions',
@@ -211,7 +211,7 @@ class ModuleLoader {
 				]
 			)
 			->addCheckbox(
-				'acf_plus_modules',
+				'acf_wpi_modules',
 				[
 					'label'   => '',
 					'layout'  => 'vertical',
@@ -221,7 +221,7 @@ class ModuleLoader {
 					],
 				]
 			)
-			->setLocation( 'options_page', '==', 'acf_plus_options_page' );
+			->setLocation( 'options_page', '==', 'acf_wpi_options_page' );
 
 		acf_add_local_field_group( $acf_modules->build() );
 	}
@@ -235,7 +235,7 @@ class ModuleLoader {
 	 */
 	public function get_modules() {
 		$partials = array();
-		$option   = get_field( 'acf_plus_modules', 'option' );
+		$option   = get_field( 'acf_wpi_modules', 'option' );
 		if ( $option && is_array( $option ) ) {
 			foreach ( $option as $id ) {
 				$path = $this->modules[ $id ]['path'];

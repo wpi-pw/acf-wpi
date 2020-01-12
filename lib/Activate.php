@@ -5,7 +5,7 @@
  * @package  ACF
  */
 
-namespace ACF\ACFPLUS;
+namespace ACF\ACFWPI;
 
 /**
  * Class Activate

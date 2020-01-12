@@ -12,10 +12,10 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
  * Register the needed fields for events.
  */
 if ( function_exists( 'acf_add_local_field_group' ) ) {
-	$acf_module = new FieldsBuilder( 'event_details', [ 'title' => __( 'Event Details', 'acf_plus' ) ] );
+	$acf_module = new FieldsBuilder( 'event_details', [ 'title' => __( 'Event Details', 'acf_wpi' ) ] );
 	$acf_module
-		->addText( 'acf_event_start', [ 'label' => __( 'Start date', 'acf_plus' ) ] )
-		->addText( 'acf_event_end', [ 'label' => __( 'End date', 'acf_plus' ) ] )
+		->addText( 'acf_event_start', [ 'label' => __( 'Start date', 'acf_wpi' ) ] )
+		->addText( 'acf_event_end', [ 'label' => __( 'End date', 'acf_wpi' ) ] )
 		->setLocation( 'post_type', '==', 'page' );
 	acf_add_local_field_group( $acf_module->build() );
 }
@@ -27,8 +27,8 @@ if ( function_exists( 'acf_add_local_field_group' ) ) {
  *
  * @return mixed
  */
-function acf_plus_event( $content ) {
+function acf_wpi_event( $content ) {
 	include __DIR__ . '/partial.php';
 	return $content;
 }
-add_filter( 'the_content', 'acf_plus_event' );
+add_filter( 'the_content', 'acf_wpi_event' );

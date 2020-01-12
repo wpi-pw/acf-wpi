@@ -1,13 +1,13 @@
 {
-  "name": "acf-plus/advanced-custom-fields-plus",
+  "name": "wpi-pw/acf-wpi",
   "description": "A custom ACF plugin boilerplate",
-  "homepage": "https://acf.plus/",
+  "homepage": "https://acf.wpi.pw/",
   "type": "wordpress-plugin",
   "license": "GPL-3.0",
   "authors": [
     {
       "name": "Dima Minka",
-      "email": "info@acf.plus"
+      "email": "info@wpi.pw"
     }
   ],
   "keywords": [
@@ -17,12 +17,12 @@
     "cdk"
   ],
   "support": {
-    "issues": "https://github.com/acf-plus/advanced-custom-fields-plus/issues",
-    "forum": "https://github.com/acf-plus/advanced-custom-fields-plus/issues"
+    "issues": "https://github.com/wpi-pw/acf-wpi/issues",
+    "forum": "https://github.com/wpi-pw/acf-wpi/issues"
   },
   "autoload": {
     "psr-4": {
-      "ACF\\ACFPLUS\\": "lib/"
+      "ACF\\ACFWPI\\": "lib/"
     }
   },
   "require": {

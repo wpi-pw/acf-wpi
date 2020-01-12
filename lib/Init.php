@@ -8,12 +8,12 @@
  * @package  ACF
  */
 
-namespace ACF\ACFPLUS;
+namespace ACF\ACFWPI;
 
 /**
  * Class Init
  *
- * @package ACF\ACFPLUS
+ * @package ACF\ACFWPI
  */
 final class Init {
 
@@ -61,7 +61,7 @@ final class Init {
 			$this->version = '1.0.0';
 		}
 
-		$this->plugin_name = 'advanced-custom-fields-plus';
+		$this->plugin_name = 'acf-wpi';
 
 		$this->loader = new Loader();
 

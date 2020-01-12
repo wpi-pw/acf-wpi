@@ -2,20 +2,20 @@
 /**
  * The plugin bootstrap file
  *
- * @link              https://acf.plus
+ * @link              https://acf.wpi.pw
  * @since             1.0.0
  * @package           ACF
  *
  * @wordpress-plugin
- * Plugin Name:       Advanced Custom Fields Plus
- * Plugin URI:        https://acf.plus
+ * Plugin Name:       Advanced Custom Fields Wpi
+ * Plugin URI:        https://acf.wpi.pw
  * Description:       A custom ACF plugin boilerplate
  * Version:           1.0.0
  * Author:            Dima Minka
- * Author URI:        https://acf.plus
+ * Author URI:        https://acf.wpi.pw
  * License:           GPL-2.0+
  * License URI:       http://www.gnu.org/licenses/gpl-2.0.txt
- * Text Domain:       acf_plus
+ * Text Domain:       acf_wpi
  * Domain Path:       /
  */
 
@@ -32,8 +32,8 @@ if ( ! defined( 'WPINC' ) ) {
  * @param string $title
  */
 $acf_error = function ( $message, $subtitle = '', $title = '' ) {
-	$title   = $title ?: __( 'ACF &rsaquo; Error', 'acf_plus' );
-	$footer  = '<a href="https://acf.plus/">acf.plus</a>';
+	$title   = $title ?: __( 'ACF &rsaquo; Error', 'acf_wpi' );
+	$footer  = '<a href="https://acf.wpi.pw/">acf.wpi.pw</a>';
 	$message = "<h1>{$title}<br><small>{$subtitle}</small></h1><p>{$message}</p><p>{$footer}</p>";
 	wp_die( wp_kses_post( $message ), esc_attr( $title ) );
 };
@@ -42,7 +42,7 @@ $acf_error = function ( $message, $subtitle = '', $title = '' ) {
  * Ensure compatible version of PHP is used
  */
 if ( version_compare( '7.1', phpversion(), '>=' ) ) {
-	$acf_error( __( 'You must be using PHP 7.1 or greater.', 'acf_plus' ), __( 'Invalid PHP version', 'acf_plus' ) );
+	$acf_error( __( 'You must be using PHP 7.1 or greater.', 'acf_wpi' ), __( 'Invalid PHP version', 'acf_wpi' ) );
 }
 
 /**
@@ -51,7 +51,7 @@ if ( version_compare( '7.1', phpversion(), '>=' ) ) {
 
 if ( ! file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 	$acf_error(
-		__( 'You must run <code>composer install</code> from the ACF Plus directory.', 'acf_plus' )
+		__( 'You must run <code>composer install</code> from the ACF Wpi directory.', 'acf_wpi' )
 	);
 } elseif ( file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 	require_once dirname( __FILE__ ) . '/vendor/autoload.php';
@@ -60,13 +60,13 @@ if ( ! file_exists( dirname( __FILE__ ) . '/vendor/autoload.php' ) ) {
 /**
  * Displays a message that Advance Custom Fields/Ultimate Fields is needed for the theme.
  */
-function acf_plus_checker() {
+function acf_wpi_checker() {
 	if ( ! class_exists( 'acf' ) ) {
-		$message = __( 'Please install and activate Advanced Custom Fields', 'acf_plus' );
+		$message = __( 'Please install and activate Advanced Custom Fields', 'acf_wpi' );
 		printf( '<div class="notice notice-error"><p>%s</p></div>', esc_attr( $message ) );
 	}
 }
-add_action( 'admin_notices', 'acf_plus_checker' );
+add_action( 'admin_notices', 'acf_wpi_checker' );
 
 /**
  * The code that runs during plugin activation
@@ -75,7 +75,7 @@ register_activation_hook(
 	__FILE__,
 	function () {
 
-		ACF\ACFPLUS\Activate::activate();
+		ACF\ACFWPI\Activate::activate();
 
 	}
 );
@@ -87,7 +87,7 @@ register_deactivation_hook(
 	__FILE__,
 	function () {
 
-		ACF\ACFPLUS\Deactivate::deactivate();
+		ACF\ACFWPI\Deactivate::deactivate();
 
 	}
 );
@@ -95,7 +95,7 @@ register_deactivation_hook(
 /**
  * Initialize all the core classes of the plugin
  */
-if ( class_exists( 'ACF\\ACFPLUS\\Init' ) ) {
-	$init = new ACF\ACFPLUS\Init();
+if ( class_exists( 'ACF\\ACFWPI\\Init' ) ) {
+	$init = new ACF\ACFWPI\Init();
 	$init->run();
 }

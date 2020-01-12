@@ -5,12 +5,12 @@
  * @package  ACF
  */
 
-namespace ACF\ACFPLUS\Frontend\Callbacks;
+namespace ACF\ACFWPI\Frontend\Callbacks;
 
 /**
  * Class FrontendCallbacks
  *
- * @package ACF\ACFPLUS\Frontend\Callbacks
+ * @package ACF\ACFWPI\Frontend\Callbacks
  */
 class FrontendCallbacks {
 

@@ -9,12 +9,12 @@
  * @package  ACF
  */
 
-namespace ACF\ACFPLUS;
+namespace ACF\ACFWPI;
 
 /**
  * Class Loader
 
- * @package ACF\ACFPLUS
+ * @package ACF\ACFWPI
  */
 class Loader {
 

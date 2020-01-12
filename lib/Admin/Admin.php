@@ -5,15 +5,15 @@
  * @package  ACF
  */
 
-namespace ACF\ACFPLUS\Admin;
+namespace ACF\ACFWPI\Admin;
 
-use ACF\ACFPLUS\Admin\Callbacks\AcfPlusOptions;
-use ACF\ACFPLUS\Admin\Callbacks\AdminCallbacks;
+use ACF\ACFWPI\Admin\Callbacks\AcfWpiOptions;
+use ACF\ACFWPI\Admin\Callbacks\AdminCallbacks;
 
 /**
  * Class Admin
  *
- * @package ACF\ACFPLUS\Admin
+ * @package ACF\ACFWPI\Admin
  */
 class Admin {
 
@@ -53,7 +53,7 @@ class Admin {
 		$this->version     = $version;
 
 		$this->callbacks = new AdminCallbacks();
-		$this->callbacks = new AcfPlusOptions();
+		$this->callbacks = new AcfWpiOptions();
 
 	}
 
