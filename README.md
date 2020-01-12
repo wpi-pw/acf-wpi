@@ -21,15 +21,15 @@ Before composer install -> do a find and replace in all folders for ACFWPI.  Rep
 To Bootstrap:
 
 1. composer install
-2. yarn
-3. yarn run watch
+2. npm i
+3. npm run watch
 
 
 All Commands:
-
+```shell
 composer install
 composer dump-autoload
-yarn
-yarn run dev
-yarn run watch
-yarn run production
+npm i
+npm run watch
+npm run dev # prod for production
+```
