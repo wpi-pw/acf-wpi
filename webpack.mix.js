@@ -1,5 +1,5 @@
 const mix = require('laravel-mix');
-const HtmlWebpackExternalsPlugin = require('html-webpack-externals-plugin');
+const modulesPath = 'lib/modules';
 
 /*
  |--------------------------------------------------------------------------
@@ -32,25 +32,16 @@ mix.webpackConfig({
 		],
 		enforceExtension: false
 	},
-	plugins: [
-		new HtmlWebpackExternalsPlugin({
-			externals: [
-				{
-					module: 'jquery',
-					entry:  '../../../../../wp/wp-includes/js/jquery/jquery.js',
-					global: 'jQuery',
-				}
-			],
-		}),
-	]
+	externals: {
+		jquery: 'jQuery'
+	}
 });
 
 mix.js('src/scripts/admin.js', 'dist/')
 	.js('src/scripts/main.js','dist/')
+	.js(`${modulesPath}/acf_event/src/script.js`,`${modulesPath}/acf_event/`)
 	.sass('src/styles/admin.scss', 'dist/')
-	.options({
-		processCssUrls: false
-	})
+	.sass(`${modulesPath}/acf_event/src/style.scss`,`${modulesPath}/acf_event/`)
 	.sass('src/styles/main.scss', 'dist/')
 	.options({
 		processCssUrls: false
@@ -65,7 +56,9 @@ mix.browserSync({
 	open: false,
 	files: [
 		'dist/*.js',
-		'dist/*.css'
+		'dist/*.css',
+		'lib/modules/**/*.js',
+		'lib/modules/**/*.css'
 	]
 });
 
