@@ -120,15 +120,16 @@ class ModuleLoader {
 	 * Enqueue the styles and scripts for each module.
 	 */
 	public function enqueue_scripts_styles() {
-		foreach ( $this->modules as $id => $module ) {
-			if ( file_exists( $module['path'] . 'script.js' ) ) {
-				wp_enqueue_script( $id . '-js', $module['url'] . 'script.js', array( 'jquery' ), true, true );
-			}
+			$active  = get_field( 'acf_wpi_modules', 'option' );
+			foreach ( $this->modules as $id => $module ) {
+					if ( in_array( $id, $active, true ) && file_exists( $module['path'] . 'script.js' ) ) {
+							wp_enqueue_script( $id . '-js', $module['url'] . 'script.js', array( 'jquery' ), true, true );
+					}
 
-			if ( file_exists( $module['path'] . 'style.css' ) ) {
-				wp_enqueue_style( $id, $module['url'] . 'style.css', true, true );
+					if ( in_array( $id, $active, true ) && file_exists( $module['path'] . 'style.css' ) ) {
+							wp_enqueue_style( $id, $module['url'] . 'style.css', true, true );
+					}
 			}
-		}
 	}
 
 	/**
