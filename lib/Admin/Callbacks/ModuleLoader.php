@@ -76,10 +76,9 @@ class ModuleLoader {
 				}
 				require_once $path . 'fields.php';
 			}
+			// Add hooks.
+			add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts_styles' ), 11 );
 		}
-
-		// Add hooks.
-		add_action( 'wp_enqueue_scripts', array( $this, 'enqueue_scripts_styles' ), 11 );
 	}
 
 	/**
