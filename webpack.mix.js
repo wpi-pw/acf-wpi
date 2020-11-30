@@ -1,5 +1,8 @@
 const mix = require('laravel-mix');
 const modulesPath = 'lib/modules';
+require('dotenv').config({path: '../../../../.env'}); //GET .env
+const ACF_MODULES = process.env.ACF_MODULES; // Get ACF_MODULES variable from env. This variable contains all project modules e.g.: "acf_event,acf_intl_tel"
+const modules = ACF_MODULES ? ACF_MODULES.split(',') : ['acf_event']; // Split modules string if exist or use pre-set Array
 
 /*
  |--------------------------------------------------------------------------
@@ -28,7 +31,7 @@ if(mix.inProduction()) {
 mix.webpackConfig({
 	resolve: {
 		modules: [
-			'node_modules'
+			'node_modules', 'src/scripts/helpers', 'src/styles'
 		],
 		enforceExtension: false
 	},
@@ -39,15 +42,18 @@ mix.webpackConfig({
 
 mix.js('src/scripts/admin.js', 'dist/')
 	.js('src/scripts/main.js','dist/')
-	.js(`${modulesPath}/acf_event/src/script.js`,`${modulesPath}/acf_event/`)
 	.sass('src/styles/admin.scss', 'dist/')
-	.sass(`${modulesPath}/acf_event/src/style.scss`,`${modulesPath}/acf_event/`)
 	.sass('src/styles/main.scss', 'dist/')
-	.options({
-		processCssUrls: false
-	})
+	.options({processCssUrls: false})
 	.copyDirectory('src/fonts', 'dist/fonts')
 	.copyDirectory('src/images', 'dist/images');
+
+// Add each modules assets build
+modules.forEach(function (module) {
+	mix
+		.js(`${modulesPath}/${module}/src/scripts/script.js`,`${modulesPath}/${module}/`)
+		.sass(`${modulesPath}/${module}/src/styles/style.scss`,`${modulesPath}/${module}/`).options({processCssUrls: false});
+});
 
 mix.browserSync({
 	proxy: 'http://acf.test',

@@ -17,9 +17,12 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.*",
+    "browser-sync": "^2.26.13",
     "browser-sync-webpack-plugin": "2.*",
-    "laravel-mix": "^5.*"
+    "laravel-mix": "^5.0.9",
+    "sass": "^1.29.0",
+    "sass-loader": "^8.0.2",
+    "vue-template-compiler": "^2.6.12"
   },
   "dependencies": {
     "magnific-popup": "^1.1.0",
