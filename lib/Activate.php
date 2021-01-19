@@ -9,7 +9,7 @@ namespace ACF\ACFWPI;
 
 /**
  * Class Activate
-
+ *
  * @package ACF\ACFPLUS
  */
 class Activate {

@@ -120,16 +120,16 @@ class ModuleLoader {
 	 * Enqueue the styles and scripts for each module.
 	 */
 	public function enqueue_scripts_styles() {
-			$active  = get_field( 'acf_wpi_modules', 'option' );
-			foreach ( $this->modules as $id => $module ) {
-					if ( in_array( $id, $active, true ) && file_exists( $module['path'] . 'script.js' ) ) {
-							wp_enqueue_script( $id . '-js', $module['url'] . 'script.js', array( 'jquery' ), true, true );
-					}
-
-					if ( in_array( $id, $active, true ) && file_exists( $module['path'] . 'style.css' ) ) {
-							wp_enqueue_style( $id, $module['url'] . 'style.css', true, true );
-					}
+			$active = get_field( 'acf_wpi_modules', 'option' );
+		foreach ( $this->modules as $id => $module ) {
+			if ( in_array( $id, $active, true ) && file_exists( $module['path'] . 'script.js' ) ) {
+					wp_enqueue_script( $id . '-js', $module['url'] . 'script.js', array( 'jquery' ), true, true );
 			}
+
+			if ( in_array( $id, $active, true ) && file_exists( $module['path'] . 'style.css' ) ) {
+					wp_enqueue_style( $id, $module['url'] . 'style.css', true, true );
+			}
+		}
 	}
 
 	/**
@@ -177,49 +177,49 @@ class ModuleLoader {
 			->addMessage(
 				'acf_wpi_ui_enable_description',
 				__( 'Default visual custom fields editor', 'acf_wpi' ),
-				[
+				array(
 					'label'     => __( 'Enable ACF UI', 'acf_wpi' ),
-					'wrapper'   => [
+					'wrapper'   => array(
 						'width' => '22%',
 						'id'    => 'major-publishing-actions',
-					],
+					),
 					'esc_html'  => 0,
 					'new_lines' => 'wpautop',
-				]
+				)
 			)
 			->addTrueFalse(
 				'acf_wpi_ui_enable',
-				[
+				array(
 					'label'   => '',
 					'ui'      => 1,
-					'wrapper' => [
+					'wrapper' => array(
 						'width' => '78%',
-					],
-				]
+					),
+				)
 			)
 			->addMessage(
 				'acf_wpi_modules_description',
 				$description,
-				[
+				array(
 					'label'     => __( 'Modules', 'acf_wpi' ),
-					'wrapper'   => [
+					'wrapper'   => array(
 						'width' => '22%',
 						'id'    => 'major-publishing-actions',
-					],
+					),
 					'esc_html'  => 0,
 					'new_lines' => 'wpautop',
-				]
+				)
 			)
 			->addCheckbox(
 				'acf_wpi_modules',
-				[
+				array(
 					'label'   => '',
 					'layout'  => 'vertical',
 					'choices' => $modules,
-					'wrapper' => [
+					'wrapper' => array(
 						'width' => '78%',
-					],
-				]
+					),
+				)
 			)
 			->setLocation( 'options_page', '==', 'acf_wpi_options_page' );
 

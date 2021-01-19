@@ -32,7 +32,7 @@ if ( ! defined( 'WPINC' ) ) {
  * @param string $title
  */
 $acf_error = function ( $message, $subtitle = '', $title = '' ) {
-	$title   = $title ?: __( 'ACF &rsaquo; Error', 'acf_wpi' );
+	$title   = $title ? $title : __( 'ACF &rsaquo; Error', 'acf_wpi' );
 	$footer  = '<a href="https://acf.wpi.pw/">acf.wpi.pw</a>';
 	$message = "<h1>{$title}<br><small>{$subtitle}</small></h1><p>{$message}</p><p>{$footer}</p>";
 	wp_die( wp_kses_post( $message ), esc_attr( $title ) );
