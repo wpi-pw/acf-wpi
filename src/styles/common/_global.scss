@@ -12,9 +12,8 @@ html {
 
 body {
 	min-height: 100vh;
-	min-width: scut-em(320);
+	min-width: 320px;
 	overflow-x: hidden;
-	font-family: $font-r;
 	font-size: 100%;
 	padding: 0;
 	margin: 0;
@@ -28,21 +27,12 @@ body {
 			top: 32px;
 		}
 	}
-
-	h1, h2, h3, h4, h5, h6 {
-		font-size: inherit;
-	}
 }
 
 input[type=submit],
 button,
-a {
+a[href] {
 	cursor: pointer;
-}
-
-.container {
-	margin: 0 auto;
-	padding: 0 scut-rem(10);
 }
 
 img {
@@ -57,5 +47,5 @@ polygon,
 circle,
 rect {
 	outline: none;
-	transition: all $hover-time ease-in;
+	transition: all 0.2s ease-in;
 }
