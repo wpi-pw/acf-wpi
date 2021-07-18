@@ -5,6 +5,9 @@
 .cache-loader
 dist
 lib/modules/*
+lib/modules/**/script.js
+lib/modules/**/*.css
+lib/modules/**/*.js
 !lib/modules/acf_event
 
 # Editors

@@ -68,7 +68,7 @@ mix.browserSync({
 	]
 });
 
-mix.disableSuccessNotifications();
+mix.disableNotifications();
 
 // Full API
 // mix.js(src, output);

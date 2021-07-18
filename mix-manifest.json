@@ -1,8 +1,8 @@
 {
     "/dist/admin.js": "/dist/admin.js",
-    "/dist/admin.css": "/dist/admin.css",
-    "/dist/main.css": "/dist/main.css",
-    "/lib/modules/acf_event/style.css": "/lib/modules/acf_event/style.css",
     "/dist/main.js": "/dist/main.js",
-    "/lib/modules/acf_event/script.js": "/lib/modules/acf_event/script.js"
+    "/lib/modules/acf_event/script.js": "/lib/modules/acf_event/script.js",
+    "/lib/modules/acf_event/style.css": "/lib/modules/acf_event/style.css",
+    "/dist/main.css": "/dist/main.css",
+    "/dist/admin.css": "/dist/admin.css"
 }
