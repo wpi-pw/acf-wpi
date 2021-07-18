@@ -4,9 +4,9 @@ dist: trusty
 php:
   - 7.4
   - nightly
-
-env:
-  - TRAVIS_NODE_VERSION="12"
+  
+node_js:
+  - 12
 
 matrix:
   fast_finish: true
@@ -22,7 +22,7 @@ cache:
 
 before_install:
   - composer self-update
-  - source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
+  - npm i
 
 install:
   - node -v
