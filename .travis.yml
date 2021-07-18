@@ -2,12 +2,11 @@ language: php
 sudo: false
 dist: trusty
 php:
-  - 7.1
+  - 7.4
   - nightly
 
 env:
-  - TRAVIS_NODE_VERSION="6"
-  - TRAVIS_NODE_VERSION="7"
+  - TRAVIS_NODE_VERSION="12"
 
 matrix:
   fast_finish: true
@@ -18,21 +17,19 @@ cache:
   apt: true
   directories:
     - $HOME/.composer/cache
-    - $HOME/.yarn-cache
+    - node_modules
     - vendor
 
 before_install:
   - composer self-update
   - source ~/.nvm/nvm.sh && nvm install $TRAVIS_NODE_VERSION && nvm use $TRAVIS_NODE_VERSION
-  - export PATH=$HOME/.yarn/bin:$PATH && travis_retry curl -o- -L https://yarnpkg.com/install.sh | bash
 
 install:
-  - node -v && yarn -V
-  - travis_retry yarn
+  - node -v
   - composer install -o --prefer-dist --no-interaction
 
 script:
-  - yarn run dev
-  - yarn run rmdist
-  - yarn run prod
+  - npm run dev
+  - npm run rmdist
+  - npm run prod
   - composer test
