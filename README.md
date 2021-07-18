@@ -1,7 +1,7 @@
 # [Advanced Custom Fields wpi](https://acf.wpi.pw)
 [![Packagist](https://img.shields.io/packagist/vpre/wpi-pw/acf-wpi.svg?style=flat-square)](https://packagist.org/packages/wpi-pw/acf-wpi)
 [![devDependency Status](https://img.shields.io/david/dev/wpi-pw/acf-wpi.svg?style=flat-square)](https://david-dm.org/wpi-pw/acf-wpi#info=devDependencies)
-[![Build Status](https://img.shields.io/travis/wpi-pw/acf-wpi.svg?style=flat-square)](https://travis-ci.org/wpi-pw/acf-wpi)
+[![Build Status](https://img.shields.io/travis/wpi-pw/acf-wpi.svg?style=flat-square)](https://travis-ci.com/wpi-pw/acf-wpi)
 
 === Advanced Custom Fields wpi ===
 
