@@ -57,7 +57,6 @@ modules.forEach(function (module) {
 
 mix.browserSync({
 	proxy: 'http://acf.test',
-
 	delay: 500,
 	open: false,
 	files: [

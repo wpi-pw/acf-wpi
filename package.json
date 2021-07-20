@@ -7,19 +7,19 @@
     "lib": "lib"
   },
   "scripts": {
-    "dev": "NODE_ENV=development webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "watch": "NODE_ENV=development webpack --watch --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "hot": "NODE_ENV=development webpack-dev-server --inline --hot --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "prod": "NODE_ENV=production webpack --progress --config=node_modules/laravel-mix/setup/webpack.config.js",
-    "rmdist": "rimraf dist"
+    "dev": "mix",
+    "watch": "mix watch",
+    "watch-poll": "mix watch -- --watch-options-poll=1000",
+    "hot": "mix watch --hot",
+    "prod": "mix --production"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "browser-sync": "^2.26.13",
+    "browser-sync": "^2.*",
     "browser-sync-webpack-plugin": "2.*",
-    "laravel-mix": "^6.0.25",
+    "laravel-mix": "^6.*",
     "sass": "^1.29.0",
     "sass-loader": "^8.0.2",
     "vue-template-compiler": "^2.6.12"
